@@ -1,0 +1,2 @@
+class UserSuggestedPhoto < ApplicationRecord
+end

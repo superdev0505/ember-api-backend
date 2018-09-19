@@ -1,0 +1,23 @@
+development:
+  adapter: redis
+  url: redis://<%= "#{ ENV.fetch('REDIS_URL', 'localhost') }:#{ENV.fetch('REDIS_PORT', '6379') }" %>
+  RDS_DB_NAME: 'oslr_development'
+  RDS_USERNAME: root
+  RDS_PASSWORD: root
+  RDS_HOSTNAME: localhost
+  RDS_PORT: 3306
+
+test:
+  adapter: async
+  RDS_DB_NAME: 'oslr_development'
+  RDS_USERNAME: root
+  RDS_PASSWORD: root
+  RDS_HOSTNAME: localhost
+
+production:
+  adapter: redis
+  url: redis://<%= "#{ ENV.fetch('REDIS_URL', 'localhost') }:#{ENV.fetch('REDIS_PORT', '6379') }" %>
+  RDS_DB_NAME: 'oslr_development'
+  RDS_USERNAME: root
+  RDS_PASSWORD: root
+  RDS_HOSTNAME: localhost

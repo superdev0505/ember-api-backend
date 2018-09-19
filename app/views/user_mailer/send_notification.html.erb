@@ -1,0 +1,13 @@
+<h2 style="text-align:center;">
+  You have a new message on Oslr
+</h2>
+
+<p>
+  <%= @message %>
+</p>
+
+<% if @link %>
+  <p>
+    <a href="https://app.oslr.co.uk/#<%= @link %>">Click here to view in Oslr</a>
+  </p>
+<% end %>

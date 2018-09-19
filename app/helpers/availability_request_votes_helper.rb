@@ -1,0 +1,2 @@
+module AvailabilityRequestVotesHelper
+end

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+	<h1>Welcome to Oslr</h1>
+	<p>
+		<%= @referrer.name %> has
+		<% if @redirect_method == "message "%>
+		sent you a message
+		<% elsif @redirect_message == "feedback" %>
+			requested feedback
+		<% else %>
+			contacted you
+		<% end %>
+		on Oslr.
+	</p>
+	<p>
+		We have set up an account for you with the following login details:
+	</p>
+	<p>
+		Email: <%= @user.email %>
+		<br/>
+		Password: <%= @password %>
+	</p>
+
+	<p>
+		Log in by downloading our app or visit <%= link_to "http://app.oslr.co.uk", "http://app.oslr.co.uk" %>, and join our medical education network.
+	</p>
+</body>
+</html>
